@@ -20,6 +20,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
     boolean running = false;
     float counter = 0;
     float totalSteps;
+    float zero = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class MainActivity extends WearableActivity implements SensorEventListene
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                stepsValue.setText(0);
+                stepsValue.setText(""+0);
 
                 // Update the counter when reset button clicked
                 counter = totalSteps;
